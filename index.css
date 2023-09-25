@@ -50,3 +50,42 @@ body {
   box-shadow: inset 1px 1px 1px 0px rgba(255, 255, 255, 0.54);
   display: none;
 }
+.button-container:before {
+  content: "Download";
+  display: block;
+  text-transform: uppercase;
+  color: #00fffc;
+  font-weight: 700;
+  font-size: 13px;
+  transform: translateY(38px);
+  transition: all 0.2s ease;
+}
+.button-container.active {
+  pointer-events: none;
+}
+/* .button-container
+.active:before {
+  opacity: 0;
+} */
+.buttonContainer
+.active .ball {
+  -webkit-animation: jump 2s cubic-bezier(0.16, 0.15, 1, 0.49) infinite;
+          animation: jump 2s cubic-bezier(0.16, 0.15, 1, 0.49) infinite;
+}
+.buttonContainer.active #button {
+  stroke-dashoffset: 290;
+  width: 300px;
+  stroke-width: 9;
+  -webkit-animation: struk 2s cubic-bezier(0.16, 0.15, 1, 0.49) infinite;
+          animation: struk 2s cubic-bezier(0.16, 0.15, 1, 0.49) infinite;
+}
+.button-container #button {
+  stroke-dasharray: 411;
+  stroke-dashoffset: 0;
+  marker-start: 30;
+  transform-origin: 50% 50%;
+  transition: all 0.4s
+  cubic-bezier(0.18, 0.89,
+  0.32, 1.28);
+  stroke: #00fffc;
+}
